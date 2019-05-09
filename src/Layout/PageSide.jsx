@@ -7,6 +7,9 @@ import React from "react";
 import Styled from "styled-components";
 import { device } from "./device";
 
+/**********************
+ * Other styles needed
+ *********************/
 const HideSideBar = {
   display: "none"
 };
@@ -16,9 +19,9 @@ const showOnAllScreen = {
   display: "block"
 };
 
-/**
+/*******************
  * Default style
- */
+ *******************/
 const StyledPageSide = Styled.aside`
   flexGrow: 1;
   border: 2px solid blue;
@@ -32,7 +35,7 @@ const StyledPageSide = Styled.aside`
   }
 
  @media ${device.mobileL}{
-   
+    width : 200px;
   }
 
  @media ${device.laptop} {
@@ -43,6 +46,7 @@ const StyledPageSide = Styled.aside`
 }
 `;
 
-export const PageSide = ({ children, className }) => (
-  <StyledPageSide className={className}>{children}</StyledPageSide>
+//Render PageSide
+export const PageSide = ({ children, ...props }) => (
+  <StyledPageSide {...props}>{children}</StyledPageSide>
 );

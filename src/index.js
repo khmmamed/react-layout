@@ -40,10 +40,6 @@ import LayoutContainer, { PageHeader, PageSide } from "./Layout";
 function App() {
   return (
     <LayoutContainer className="App">
-      <PageHeader pHeader={{ fixed: false, bgColor: "red" }}>
-        pHeader
-      </PageHeader>
-
       <PageSide>pSide</PageSide>
 
       <div style={{ flexGrow: 9, minHeight: 500, border: "2px solid green" }}>
